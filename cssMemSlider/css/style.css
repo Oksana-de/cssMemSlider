@@ -1,0 +1,82 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #000000;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #929292;
+  border-radius: 10px;
+}
+
+.mem__wrapper {
+  margin: 100px auto;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mem__title {
+  padding: 40px 0;
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #3f3117;
+}
+
+.mem__container {
+  margin: 0 90px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-style: none;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.mem__dot {
+  display: block;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.mem__dot:last-of-type {
+  margin-right: 0;
+}
+
+.mem__lbl {
+  display: none;
+}
+
+.mem__dot:checked + .mem__lbl {
+  display: block;
+  position: relative;
+  top: 20px;
+  font-size: 18px;
+  transition: .5s ease-in-out;
+}
+
+.mem__pic {
+  margin: 10px;
+  width: 270px;
+  height: 400px;
+  object-fit: cover;
+}
