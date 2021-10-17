@@ -48,14 +48,33 @@ body {
   height: 100%;
   display: flex;
   border-style: none;
-  text-align: center;
+  text-align: top;
+  justify-content: center;
+}
+
+.frame {
+  display: flex;
   justify-content: space-between;
+  width: 600px;
+}
+
+.lbl__wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: top;
+  justify-content: space-between;
+  width: 100%;
+  height: 13px;
 }
 
 .mem__dot {
   display: block;
+  left: 50px;
   cursor: pointer;
   margin-right: 10px;
+  /* position: relative; */
+  /* top: -100px; */
 }
 
 .mem__dot:last-of-type {
@@ -64,18 +83,18 @@ body {
 
 .mem__lbl {
   display: none;
-}
-
-.mem__dot:checked + .mem__lbl {
-  display: block;
-  position: relative;
-  top: 20px;
   font-size: 18px;
+  width: 100px;
+  height: 100px;
   transition: .5s ease-in-out;
 }
 
+.mem__dot:checked + .mem__lbl {
+  display: block; 
+}
+
 .mem__pic {
-  margin: 10px;
+  margin: 10px 0 0;
   width: 270px;
   height: 400px;
   object-fit: cover;
